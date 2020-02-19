@@ -1,0 +1,62 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "homepage_url": "https://github.com/tigregalis/nav-by-tag",
+  "developer": {
+    "name": "tigregalis",
+    "url": "https://github.com/tigregalis"
+  },
+  "description": "An extension for tagging bookmarks and navigating by them",
+  "default_locale": "en",
+  "permissions": [
+    "<all_urls>",
+    "*://*/*",
+    "bookmarks",
+    "tabs",
+    "storage"
+  ],
+  "icons": {
+    "16": "icons/logo.svg",
+    "48": "icons/logo.svg",
+    "128": "icons/logo.svg"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "browser-action-popup.html",
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "19": "icons/logo.svg",
+      "38": "icons/logo.svg"
+    },
+    "theme_icons": [
+      {
+        "dark": "icons/logo-dark.svg",
+        "light": "icons/logo-light.svg",
+        "size": 19
+      },
+      {
+        "dark": "icons/logo-dark.svg",
+        "light": "icons/logo-light.svg",
+        "size": 38
+      }
+    ]
+  },
+  "page_action": {
+    "default_popup": "page-action-popup.html",
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "19": "icons/logo-light.svg",
+      "38": "icons/logo-light.svg"
+    },
+    "show_matches": ["*://*/*"]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  }
+}
